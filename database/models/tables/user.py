@@ -7,3 +7,13 @@ class User(db.Model):
     name = db.Column(db.String(100))
     email = db.Column(db.String(70), unique=True)
     password = db.Column(db.String(80))
+
+    @classmethod
+    def create(cls, **kwargs):
+        user = cls(**kwargs)
+        return user.save()
+
+    def save(self):
+        db.session.add(self)
+        db.session.commit()
+        return self
