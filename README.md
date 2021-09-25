@@ -1,3 +1,3 @@
 # flask-auth-jwt
 
-Following this tutorial : https://www.geeksforgeeks.org/using-jwt-for-user-authentication-in-flask/
+Using JWT for user authentication in Flask
